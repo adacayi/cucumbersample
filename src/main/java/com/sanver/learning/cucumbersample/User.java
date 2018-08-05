@@ -1,6 +1,7 @@
 package com.sanver.learning.cucumbersample;
 
-public class User {
+@SuppressWarnings("unused")
+class User {
     private String userName;
     private String password;
 
@@ -8,7 +9,7 @@ public class User {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -16,7 +17,7 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
+    void setPassword(String password) {
         this.password = password;
     }
 

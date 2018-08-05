@@ -9,6 +9,7 @@ import java.util.Map;
 
 import static java.util.Locale.ENGLISH;
 
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class TypeRegistryConfiguration implements TypeRegistryConfigurer {
 
     @Override
