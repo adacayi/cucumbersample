@@ -8,19 +8,19 @@ import org.junit.jupiter.api.Assertions;
 public class StepDefinitions {
     private Belly belly;
 
-    @Given("I have {int} cukes in my belly")
-    public void i_have_cukes_in_my_belly(Integer cukes) {
+    @Given("^I have (\\d+) cukes in my belly$")
+    public void iHaveCukesInMyBelly(int cukes) {
         belly = new Belly();
         belly.eat(cukes);
     }
 
-    @When("I wait {int} hour")
-    public void i_wait_hour(Integer hours) {
+    @When("^I wait (\\d+) hour$")
+    public void iWaitHour(int hours) {
         belly.waitFor(hours);
     }
 
-    @Then("my belly should growl")
-    public void my_belly_should_growl() {
+    @Then("^my belly should growl$")
+    public void myBellyShouldGrowl() {
         Assertions.assertTrue(belly.isGrowling());
     }
 }
