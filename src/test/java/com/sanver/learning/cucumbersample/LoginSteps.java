@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class LoginSteps {
-    private WebDriver webDriver;
+    private final WebDriver webDriver;
 
     public LoginSteps(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -17,8 +17,6 @@ public class LoginSteps {
 
     @Given("^I navigate to the login page of the application$")
     public void iNavigateToTheLoginPageOfTheApplication() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new PendingException();
     }
 
     @And("^I enter the following for Login$")
@@ -29,8 +27,6 @@ public class LoginSteps {
 
     @And("^I click login button$")
     public void iClickLoginButton() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new PendingException();
     }
 
     @Then("^I should see the userform page$")

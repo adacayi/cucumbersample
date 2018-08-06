@@ -1,6 +1,6 @@
 package com.sanver.learning.cucumbersample;
 
-public class WebDriver {
+class WebDriver {
     private String name;
 
     String getName() {
@@ -9,8 +9,5 @@ public class WebDriver {
 
     void setName(String name) {
         this.name = name;
-    }
-
-    public WebDriver() {
     }
 }

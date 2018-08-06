@@ -5,7 +5,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hook {
-    private WebDriver webDriver;
+    private final WebDriver webDriver;
 
     public Hook(WebDriver webDriver) {
         this.webDriver = webDriver;
