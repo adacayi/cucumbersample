@@ -14,20 +14,25 @@ public class LoginSteps {
     }
 
     @And("^I enter the following for Login$")
-    public void iEnterTheFollowingForLogin(List<User> users)  {
+    public void iEnterTheFollowingForLogin(List<User> users) {
         users.forEach(user -> System.out.printf("\nUser name: %s\nPassword: %s\n", user.getUserName(),
                 user.getPassword()));
     }
 
     @And("^I click login button$")
-    public void iClickLoginButton()  {
+    public void iClickLoginButton() {
         // Write code here that turns the phrase above into concrete actions
 //        throw new PendingException();
     }
 
     @Then("^I should see the userform page$")
-    public void iShouldSeeTheUserformPage()  {
+    public void iShouldSeeTheUserformPage() {
         // Write code here that turns the phrase above into concrete actions
 //        throw new PendingException();
+    }
+
+    @And("^I enter ([^\"]*) and ([^\"]*)$")
+    public void iEnterUserNameAndPassword(String userName, String password) {
+        System.out.printf("\nUser name: %s\nPassword: %s\n", userName, password);
     }
 }
