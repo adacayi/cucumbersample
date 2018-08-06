@@ -1,9 +1,11 @@
 package com.sanver.learning.cucumbersample;
 
+import cucumber.api.Transform;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class LoginSteps {
@@ -44,5 +46,10 @@ public class LoginSteps {
     @And("^I enter username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
     public void iEnterUsernameAsAndPasswordAs(String userName, String password) {
         System.out.printf("\nUser name: %s\nPassword: %s\n", userName, password);
+    }
+
+    @And("^I enter the date as \"([^\"]*)\"$")
+    public void iEnterTheDateAs(@Transform(DateTransformer.class) LocalDate date) {
+        System.out.printf("\nEntered date is %s", date.toString());
     }
 }

@@ -4,6 +4,7 @@ Feature: Login
   Scenario: Login with correct user name and password
     Given I navigate to the login page of the application
     And I enter username as "ahmet" and password as "simplePassword"
+    And I enter the date as "31-12-2014"
     Then I should see the userform page
 
   Scenario: Logging with correct user name and password with DataTable
