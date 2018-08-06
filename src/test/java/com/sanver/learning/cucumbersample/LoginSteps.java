@@ -7,6 +7,12 @@ import cucumber.api.java.en.Then;
 import java.util.List;
 
 public class LoginSteps {
+    private WebDriver webDriver;
+
+    public LoginSteps(WebDriver webDriver) {
+        this.webDriver = webDriver;
+    }
+
     @Given("^I navigate to the login page of the application$")
     public void iNavigateToTheLoginPageOfTheApplication() {
         // Write code here that turns the phrase above into concrete actions
@@ -27,8 +33,7 @@ public class LoginSteps {
 
     @Then("^I should see the userform page$")
     public void iShouldSeeTheUserformPage() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new PendingException();
+        System.out.printf("\n%s is installed\n",webDriver.getName());
     }
 
     @And("^I enter ([^\"]*) and ([^\"]*)$")

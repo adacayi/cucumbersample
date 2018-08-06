@@ -5,9 +5,16 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hook {
+    private WebDriver webDriver;
+
+    public Hook(WebDriver webDriver) {
+        this.webDriver = webDriver;
+    }
+
     @Before
     public void setUp(Scenario scenario) {
         String scenarioName = scenario.getName();
+        webDriver.setName("Web driver for scenario " + scenarioName);
         System.out.printf("\nHooking up to %s", scenarioName);
     }
 
