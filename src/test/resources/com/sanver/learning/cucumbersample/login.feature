@@ -1,7 +1,12 @@
 Feature: Login
   This feature deals with the login functionality of the application
 
-  Scenario: Logging with correct user name and password
+  Scenario: Login with correct user name and password
+    Given I navigate to the login page of the application
+    And I enter username as "ahmet" and password as "simplePassword"
+    Then I should see the userform page
+
+  Scenario: Logging with correct user name and password with DataTable
     Given I navigate to the login page of the application
     And I enter the following for Login
       | UserName | Password |

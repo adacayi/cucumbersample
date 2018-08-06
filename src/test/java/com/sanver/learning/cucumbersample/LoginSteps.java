@@ -33,11 +33,16 @@ public class LoginSteps {
 
     @Then("^I should see the userform page$")
     public void iShouldSeeTheUserformPage() {
-        System.out.printf("\n%s is installed\n",webDriver.getName());
+        System.out.printf("\n%s is installed\n", webDriver.getName());
     }
 
     @And("^I enter ([^\"]*) and ([^\"]*)$")
     public void iEnterUserNameAndPassword(String userName, String password) {
+        System.out.printf("\nUser name: %s\nPassword: %s\n", userName, password);
+    }
+
+    @And("^I enter username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
+    public void iEnterUsernameAsAndPasswordAs(String userName, String password) {
         System.out.printf("\nUser name: %s\nPassword: %s\n", userName, password);
     }
 }
