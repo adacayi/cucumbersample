@@ -1,6 +1,6 @@
 package com.sanver.learning.cucumbersample;
 
-class WebDriver {
+public class WebDriver {
     private String name;
 
     String getName() {
